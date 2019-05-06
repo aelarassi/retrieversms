@@ -1,0 +1,7 @@
+rootProject.name = 'retrieversms'
+include ':react-native-otp-verify'
+project(':react-native-otp-verify').projectDir = new File(rootProject.projectDir, '../node_modules/react-native-otp-verify/android')
+include ':react-native-sms-retriever-api'
+project(':react-native-sms-retriever-api').projectDir = new File(rootProject.projectDir, '../node_modules/react-native-sms-retriever-api/android')
+
+include ':app'
