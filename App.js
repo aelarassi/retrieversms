@@ -1,5 +1,12 @@
 import React, { Component } from "react";
-import { Platform, StyleSheet, Text, View, Button } from "react-native";
+import {
+  Platform,
+  StyleSheet,
+  Text,
+  View,
+  Button,
+  TextInput
+} from "react-native";
 import RNSmsRetriever from "react-native-sms-retriever-api";
 
 const instructions = Platform.select({
@@ -8,6 +15,8 @@ const instructions = Platform.select({
     "Double tap R on your keyboard to reload,\n" +
     "Shake or press menu button for dev menu"
 });
+
+const 
 
 export default class App extends Component {
   constructor(props) {
@@ -25,6 +34,7 @@ export default class App extends Component {
   gHash = async () => {
     const getHash = await RNSmsRetriever.getHash();
     console.log("getHash run :", getHash);
+    
   };
 
   gOtp = async () => {
@@ -66,13 +76,20 @@ export default class App extends Component {
           <Text style={styles.instructions}>{code[2]}</Text>
           <Text style={styles.instructions}>{code[3]}</Text>
         </View>
+
+        <View style={styles.viewCodes}>
+          {
+          
+          }
+        </View>
+
         <View style={styles.viewBtn}>
-          <Button title="Send SMS" color="#0fb9b1" onPress={this.gOtp} />
           <Button
-            title="Rest Code"
+            title="Confirme"
             color="#4b6584"
             onPress={() => this.setState({ code: "CODE" })}
           />
+          <Button title="Send SMS" color="#0fb9b1" onPress={this.gOtp} />
         </View>
       </View>
     );
@@ -81,7 +98,11 @@ export default class App extends Component {
 
 const styles = StyleSheet.create({
   inputText: {
-    height: 40
+    height: 44,
+    width: 30,
+    borderBottomWidth: 1,
+    borderBottomColor: "#d6d7da",
+    textAlign: "center"
   },
   container: {
     flex: 1,
@@ -90,24 +111,24 @@ const styles = StyleSheet.create({
     backgroundColor: "#F5FCFF"
   },
   viewBtn: {
-    width: "50%",
+    width: 200,
+    minHeight: 120,
     marginTop: 20,
-    flexDirection: "row",
-    justifyContent: "space-between",
-    alignItems: "center"
-  },
-  viewCodes: {
-    width: "36%",
-    marginVertical: 20,
-    flexDirection: "row",
+    // flexDirection: "row",
     justifyContent: "space-between",
     alignItems: "center"
     // backgroundColor: "red"
   },
+  viewCodes: {
+    width: "36%",
+    marginVertical: 35,
+    flexDirection: "row",
+    justifyContent: "space-between",
+    alignItems: "center"
+  },
   welcome: {
     fontSize: 20,
-    textAlign: "center",
-    margin: 10
+    textAlign: "center"
   },
   instructions: {
     textAlign: "center",

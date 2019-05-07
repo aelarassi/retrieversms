@@ -1,7 +1,22 @@
 {
   "name": "retrieversms",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "private": true,
+  "author": "ABDELAZIZ EL ARASSI",
+  "bugs": "https://github.com/aelarassi/retrieversms/issues",
+  "contributors": [
+    "AbdeLaziz EL Arassi <elarassi.abdelaziz@gmail.com>"
+  ],
+  "homepage": "https://github.com/aelarassi/retrieversms",
+  "license": "MIT",
+  "description": "DEMO | Google SMS Retriever API Integration with React-Native",
+  "keywords": [
+    "otp",
+    "react-native",
+    "Retriever",
+    "SMS",
+    "demo"
+  ],
   "scripts": {
     "start": "node node_modules/react-native/local-cli/cli.js start",
     "test": "jest"
@@ -9,7 +24,6 @@
   "dependencies": {
     "react": "16.8.3",
     "react-native": "0.59.5",
-    "react-native-otp-verify": "^1.0.3",
     "react-native-sms-retriever-api": "^1.0.3"
   },
   "devDependencies": {
